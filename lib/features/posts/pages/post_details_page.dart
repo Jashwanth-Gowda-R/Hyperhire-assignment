@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hyperhire/features/posts/widgets/chips.dart';
 
 import 'package:hyperhire/features/posts/widgets/post_details.dart';
+import 'package:hyperhire/features/posts/widgets/post_img_section.dart';
 import 'package:hyperhire/features/posts/widgets/post_title.dart';
 
 class PostDetailsPage extends StatefulWidget {
@@ -116,14 +117,7 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
               const SizedBox(
                 height: 15,
               ),
-              SizedBox(
-                child: Image.asset(
-                  'assets/images/pant.jpeg',
-                  width: double.infinity,
-                  height: 450,
-                  fit: BoxFit.fitWidth,
-                ),
-              )
+              const PostImgSection()
             ],
           ),
         ),
