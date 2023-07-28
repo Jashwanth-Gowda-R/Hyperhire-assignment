@@ -28,6 +28,8 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
+        scrolledUnderElevation: 0,
         leading: IconButton(
           onPressed: () {},
           icon: const Icon(Icons.arrow_back_ios_new),
@@ -51,66 +53,79 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
           left: 0,
           bottom: 0,
         ),
-        child: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.only(
-                left: 5,
-                right: 0,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.only(
+                  left: 5,
+                  right: 0,
+                ),
+                child: const PostTitle(
+                  assetPath: 'assets/images/leading.png',
+                  title1: "안녕 나 응애",
+                  title2: "1일전",
+                  subtitle: "165cm . 53kg",
+                  btntitle: "팔로우",
+                ),
               ),
-              child: const PostTitle(
-                assetPath: 'assets/images/leading.png',
-                title1: "안녕 나 응애",
-                title2: "1일전",
-                subtitle: "165cm . 53kg",
-                btntitle: "팔로우",
+              PostDetails(
+                details: details,
+                mainDetails: mainDetails,
               ),
-            ),
-            PostDetails(
-              details: details,
-              mainDetails: mainDetails,
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 15.0, right: 15),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Chips(
-                    text: '#2023',
-                  ),
-                  Chips(
-                    text: '#TODAYISMONDAY',
-                  ),
-                  Chips(
-                    text: '#TOP',
-                  ),
-                  Chips(
-                    text: '#POPS!',
-                  )
-                ],
+              const SizedBox(
+                height: 15,
               ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 20.0, right: 15),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Chips(
-                    text: '#WOW',
-                  ),
-                  SizedBox(
-                    width: 7,
-                  ),
-                  Chips(
-                    text: '#ROW',
-                  ),
-                ],
+              const Padding(
+                padding: EdgeInsets.only(left: 15.0, right: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Chips(
+                      text: '#2023',
+                    ),
+                    Chips(
+                      text: '#TODAYISMONDAY',
+                    ),
+                    Chips(
+                      text: '#TOP',
+                    ),
+                    Chips(
+                      text: '#POPS!',
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
+              const Padding(
+                padding: EdgeInsets.only(left: 20.0, right: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Chips(
+                      text: '#WOW',
+                    ),
+                    SizedBox(
+                      width: 7,
+                    ),
+                    Chips(
+                      text: '#ROW',
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              SizedBox(
+                child: Image.asset(
+                  'assets/images/pant.jpeg',
+                  width: double.infinity,
+                  height: 450,
+                  fit: BoxFit.fitWidth,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
