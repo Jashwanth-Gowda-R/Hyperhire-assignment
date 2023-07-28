@@ -99,9 +99,9 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 4,
-              ),
+              // const SizedBox(
+              //   height: 2,
+              // ),
               const Padding(
                 padding: EdgeInsets.only(left: 20.0, right: 15),
                 child: Row(
@@ -216,7 +216,7 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
                 ],
               ),
               const SizedBox(
-                height: 50,
+                height: 30,
               ),
               const CommentTextField()
             ],
