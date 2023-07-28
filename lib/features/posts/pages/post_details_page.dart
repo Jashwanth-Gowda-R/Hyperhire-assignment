@@ -90,18 +90,27 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
                 height: 15,
               ),
               const Padding(
-                padding: EdgeInsets.only(left: 15.0, right: 15),
+                padding: EdgeInsets.only(left: 20.0, right: 15),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Chips(
                       text: '#2023',
                     ),
+                    SizedBox(
+                      width: 7,
+                    ),
                     Chips(
                       text: '#TODAYISMONDAY',
                     ),
+                    SizedBox(
+                      width: 7,
+                    ),
                     Chips(
                       text: '#TOP',
+                    ),
+                    SizedBox(
+                      width: 7,
                     ),
                     Chips(
                       text: '#POPS!',
@@ -109,10 +118,13 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 7,
+              ),
               const Padding(
                 padding: EdgeInsets.only(left: 20.0, right: 15),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Chips(
                       text: '#WOW',

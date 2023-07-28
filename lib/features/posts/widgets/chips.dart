@@ -12,11 +12,12 @@ class Chips extends StatelessWidget {
     return Container(
       child: Chip(
         backgroundColor: const Color.fromRGBO(247, 248, 250, 1),
-        padding: const EdgeInsets.all(1),
+        padding: const EdgeInsets.all(0),
         label: Text(
           text,
           style: const TextStyle(
             color: Color.fromRGBO(90, 107, 135, 1),
+            fontSize: 12,
           ),
         ),
         shape: RoundedRectangleBorder(
