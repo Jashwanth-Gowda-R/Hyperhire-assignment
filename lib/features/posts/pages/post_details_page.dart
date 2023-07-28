@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:hyperhire/features/posts/widgets/post_details.dart';
 import 'package:hyperhire/features/posts/widgets/post_title.dart';
 
 class PostDetailsPage extends StatefulWidget {
@@ -10,6 +11,8 @@ class PostDetailsPage extends StatefulWidget {
 }
 
 class _PostDetailsPageState extends State<PostDetailsPage> {
+  final String mainDetails = '지난 월요일에 했던 이벤트 중 가장 괜찮은 상품 뭐야?\n';
+
   final String details = '''\n지난 월요일에 2023년 S/S 트렌드 알아보기 이벤트 참석했던 팝들아~
 혹시 어떤 상품이 제일 괜찮았어? 
 
@@ -61,35 +64,10 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
                 btntitle: "팔로우",
               ),
             ),
-            Container(
-              alignment: Alignment.topLeft,
-              padding: const EdgeInsets.only(
-                left: 25,
-                right: 20,
-              ),
-              child: RichText(
-                text: TextSpan(
-                  text: '지난 월요일에 했던 이벤트 중 가장 괜찮은 상품 뭐야?\n',
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 14,
-                    fontFamily: 'Noto Sans',
-                  ),
-                  children: [
-                    TextSpan(
-                      text: details,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 12,
-                        fontFamily: 'Noto Sans',
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            )
+            PostDetails(
+              details: details,
+              mainDetails: mainDetails,
+            ),
           ],
         ),
       ),
