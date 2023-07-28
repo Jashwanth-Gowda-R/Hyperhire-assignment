@@ -117,7 +117,9 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
               const SizedBox(
                 height: 15,
               ),
-              const PostImgSection()
+              const PostImgSection(
+                imgPath: 'assets/images/pant.jpeg',
+              )
             ],
           ),
         ),
