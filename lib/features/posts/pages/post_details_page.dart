@@ -1,5 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:hyperhire/features/posts/widgets/chips.dart';
+
 import 'package:hyperhire/features/posts/widgets/post_details.dart';
 import 'package:hyperhire/features/posts/widgets/post_title.dart';
 
@@ -67,6 +69,46 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
             PostDetails(
               details: details,
               mainDetails: mainDetails,
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 15.0, right: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Chips(
+                    text: '#2023',
+                  ),
+                  Chips(
+                    text: '#TODAYISMONDAY',
+                  ),
+                  Chips(
+                    text: '#TOP',
+                  ),
+                  Chips(
+                    text: '#POPS!',
+                  )
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 20.0, right: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Chips(
+                    text: '#WOW',
+                  ),
+                  SizedBox(
+                    width: 7,
+                  ),
+                  Chips(
+                    text: '#ROW',
+                  ),
+                ],
+              ),
             ),
           ],
         ),
