@@ -43,12 +43,13 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
               ),
               child: const PostTitle(
                 assetPath: 'assets/images/leading.png',
-                title1: "안녕 나 응애 ",
+                title1: "안녕 나 응애",
                 title2: "1일전",
                 subtitle: "165cm . 53kg",
                 btntitle: "팔로우",
               ),
-            )
+            ),
+
           ],
         ),
       ),

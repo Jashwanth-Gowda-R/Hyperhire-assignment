@@ -25,7 +25,7 @@ class PostTitle extends StatelessWidget {
       title: Row(
         children: [
           Text(
-            title2,
+            title1,
             style: const TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class PostTitle extends StatelessWidget {
           ),
           const Icon(
             Icons.check_circle,
-            color: Colors.lightGreen,
+            color: Color.fromRGBO(1, 185, 159, 1),
           ),
           Text(
             title2,
@@ -59,7 +59,7 @@ class PostTitle extends StatelessWidget {
         onPressed: () {},
         style: ElevatedButton.styleFrom(
           elevation: 0,
-          backgroundColor: Colors.lightGreen,
+          backgroundColor: const Color.fromRGBO(1, 185, 159, 1),
         ),
         child: Text(
           btntitle,
