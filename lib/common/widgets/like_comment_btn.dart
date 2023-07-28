@@ -1,7 +1,13 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class LikeButton extends StatelessWidget {
-  const LikeButton({super.key});
+  const LikeButton({
+    Key? key,
+    required this.isComment,
+  }) : super(key: key);
+
+  final bool isComment;
 
   @override
   Widget build(BuildContext context) {
@@ -32,36 +38,42 @@ class LikeButton extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            width: 5,
-          ),
-          GestureDetector(
-            onTap: () {},
-            child: Image.asset(
-              'assets/images/off.png',
-              color: const Color.fromRGBO(
-                175,
-                185,
-                202,
-                1,
-              ),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(
-              top: 2,
-              // left: 2,
-            ),
-            child: Text(
-              '5',
-              style: TextStyle(
-                color: Color.fromRGBO(175, 185, 202, 1),
-                fontFamily: 'Roboto',
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-          ),
+          isComment
+              ? const SizedBox(
+                  width: 5,
+                )
+              : Container(),
+          isComment
+              ? GestureDetector(
+                  onTap: () {},
+                  child: Image.asset(
+                    'assets/images/off.png',
+                    color: const Color.fromRGBO(
+                      175,
+                      185,
+                      202,
+                      1,
+                    ),
+                  ),
+                )
+              : Container(),
+          isComment
+              ? const Padding(
+                  padding: EdgeInsets.only(
+                    top: 2,
+                    // left: 2,
+                  ),
+                  child: Text(
+                    '5',
+                    style: TextStyle(
+                      color: Color.fromRGBO(175, 185, 202, 1),
+                      fontFamily: 'Roboto',
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                )
+              : Container(),
         ],
       ),
     );
