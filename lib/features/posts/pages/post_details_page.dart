@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:hyperhire/common/constants/constants.dart';
 import 'package:hyperhire/common/widgets/comment_text_field.dart';
@@ -99,9 +98,6 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
                   ],
                 ),
               ),
-              // const SizedBox(
-              //   height: 2,
-              // ),
               const Padding(
                 padding: EdgeInsets.only(left: 20.0, right: 15),
                 child: Row(
