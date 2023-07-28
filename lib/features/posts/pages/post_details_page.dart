@@ -5,6 +5,7 @@ import 'package:hyperhire/features/posts/widgets/chips.dart';
 import 'package:hyperhire/features/posts/widgets/post_details.dart';
 import 'package:hyperhire/features/posts/widgets/post_img_section.dart';
 import 'package:hyperhire/features/posts/widgets/post_title.dart';
+import 'package:hyperhire/features/posts/widgets/user_interactions.dart';
 
 class PostDetailsPage extends StatefulWidget {
   const PostDetailsPage({super.key});
@@ -115,11 +116,19 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
                 ),
               ),
               const SizedBox(
-                height: 15,
+                height: 10,
               ),
               const PostImgSection(
                 imgPath: 'assets/images/pant.jpeg',
-              )
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              const UserInteractionSection(),
+              const SizedBox(
+                height: 20,
+              ),
+              const Divider(),
             ],
           ),
         ),
